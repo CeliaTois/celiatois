@@ -1,0 +1,44 @@
+$full-width: 100%;
+
+$h1-font: Ubuntu-Bold;
+
+$p-font: Ubuntu-Regular;
+$p-font-hover: Ubuntu-Bold;
+$p-font-bold: Ubuntu-Bold;
+
+$margin: (section:30px, h1:22px);
+$padding-section: 90px 30px 60px 30px;
+
+$font-size: (h1:2.5rem, nav:1rem, h4:1.1rem, icon:1.5rem, footer:1rem);
+
+$bg-color: #EDF6F9;
+
+/* Navigation */
+$nav-bg: #E29578;
+$nav-color: #FFF;
+
+/* Section 2 : Mon Parcours */
+$hard-skills-text: #FFF;
+$soft-skills-dark: #E29578;
+$soft-skills-light: #FFDDD2;
+
+$transition: all 600ms;
+
+$chat-bubble-color: #B8DEDC;
+$work-color: #006D77;
+$work-duration : #FFF;
+
+$formation-dark-clr: #E29578;
+$formation-light-clr: #F1B9A5;
+$formation-border: 3px $formation-dark-clr solid;
+$formation-bg: #F6EAE6;
+
+/* Section 3 : Portfolio */
+$portfolio-border: 3px #EDF6F9 solid;
+
+/* Section 4 : Contact */
+$contact-icon-clr: #006D77;
+$contact-p-clr: #000;
+
+/* Mentions légales */
+$mention-date-clr: #FFDDD2;

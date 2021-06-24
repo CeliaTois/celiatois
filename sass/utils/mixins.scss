@@ -1,0 +1,54 @@
+@mixin mobile-tablet {
+    @media (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 480px) and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin sm-lg-screen {
+    @media (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media (min-width: 960px) and (max-width: 1599px) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin center {
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin chat-bubble-position {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 30px;
+}
+
+@mixin skills-portfolio-position ($justify: space-around){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+}

@@ -1,0 +1,75 @@
+/* Section 1 : Mes Compétences */
+#competences {
+    padding: $padding-section;
+    @include large-screen {
+        padding: 90px 200px 60px 200px;
+    }
+    @include center;
+    h3 {
+        margin-top: map-get($margin, section);
+    }
+}
+
+.competences__blocks {
+    @include sm-lg-screen {
+        @include skills-portfolio-position;
+    }
+    &>article {
+        @include sm-lg-screen {
+            width: 48%;
+        }
+    }
+}
+
+#soft-skills {
+    padding-top: 50px;
+}
+
+.box {
+    margin-top: map-get($margin, section);
+    width: $full-width;
+    height: 202px;
+    position: relative;
+    &>img {
+        height: 70px;
+        margin-top: 65px;
+        transform: scale(1);
+        transition: $transition;
+    }
+    &:hover>img {
+        transform: scale(0.5) translateY(-100px);
+    }
+    &__text {
+        opacity: 0;
+        margin: 0 5px;
+        &>p {
+            margin-bottom: 5px;
+        }
+        &--blue {
+            color: $hard-skills-text;
+        }
+        &--pink-light {
+            color: $soft-skills-dark;
+        }
+        &--pink-dark {
+            color: $soft-skills-light;
+        }
+    }
+    &:hover>.box__text {
+        opacity: 1;
+        transition: $transition;
+        transform: translateY(-50px);
+    }
+    &--blue-dark {
+        background-color: #006d77;
+    }
+    &--blue-light {
+        background-color: #83C5BE;
+    }
+    &--pink-light {
+        background-color: $soft-skills-light;
+    }
+    &--pink-dark {
+        background-color: $soft-skills-dark;
+    }
+}

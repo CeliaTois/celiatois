@@ -1,0 +1,12 @@
+/* Footer */
+#footer, #footer a {
+    background: $bg-color;
+    text-align: center;
+    color: $contact-p-clr;
+    padding-bottom: 20px;
+    font-size: map-get($font-size, footer);
+}
+
+#footer a {
+    text-decoration: underline;
+}

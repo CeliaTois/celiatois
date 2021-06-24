@@ -1,0 +1,40 @@
+/* Section 3 : Portfolio */
+#portfolio {
+    padding: $padding-section;
+    @include large-screen {
+        padding: 90px 100px 60px 100px;
+    }
+    @include center;
+    &__blocks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include sm-lg-screen {
+            @include skills-portfolio-position ($justify:center);
+        }
+    }
+}
+
+.portfolio__block {
+    margin: 30px 10px 0 10px;
+    @include sm-lg-screen {
+        margin: 30px 20px 0 20px;
+    }
+    border: $portfolio-border;
+    width: 200px;
+    height: 355.72px;
+    @include small-screen {
+        width: 400px;
+        height: 225px;
+    }
+    @include large-screen {
+        width: 450px;
+        height: 253.12px;
+    }
+    & img {
+        width: $full-width;
+        height: $full-width;
+        object-fit: cover;
+        object-position: top;
+    }
+}

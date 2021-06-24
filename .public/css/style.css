@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* Navigation */
+/* Section 2 : Mon Parcours */
+/* Section 3 : Portfolio */
+/* Section 4 : Contact */
+/* Mentions légales */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Ubuntu-Regular;
+}
+
+@font-face {
+  font-family: Ubuntu-Light;
+  src: url(../../fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(../../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url(../../fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+/* Header */
+header {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+header h1 {
+  margin-bottom: 22px;
+  font-family: Ubuntu-Bold;
+  font-size: 2.5rem;
+}
+@media (min-width: 1600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+header p {
+  font-size: 1rem;
+}
+@media (min-width: 1600px) {
+  header p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer */
+#footer, #footer a {
+  background: #EDF6F9;
+  text-align: center;
+  color: #000;
+  padding-bottom: 20px;
+  font-size: 1rem;
+}
+
+#footer a {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  background-color: #E29578;
+  width: 100%;
+}
+nav ul {
+  text-align: center;
+}
+nav li {
+  font-size: 1rem;
+}
+nav > ul > li {
+  display: inline-block;
+  line-height: 45px;
+}
+@media (max-width: 959px) {
+  nav > ul > li > a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 959px) {
+  #nav ul {
+    /* Change the navigation bar */
+    display: none;
+    position: relative;
+    /* Reveals the menu list */
+    width: 100%;
+    height: 0;
+    /* Block's dimensions*/
+    background: #E29578;
+    transition: all 0.2s;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+.nav-element a {
+  color: #FFF;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.nav-element a:hover {
+  font-family: Ubuntu-Bold;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1600px) {
+  .nav__list__element a {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+}
+
+.check-btn {
+  font-size: 1rem;
+  color: #FFF;
+  line-height: 45px;
+  cursor: pointer;
+  margin-left: 35px;
+  display: none;
+  /* Hide "Menu" */
+}
+@media (max-width: 959px) {
+  .check-btn {
+    display: block;
+    /* Show "Menu" */
+    display: flex;
+    align-items: center;
+  }
+  .check-btn i {
+    margin-right: 10px;
+  }
+}
+
+#check {
+  display: none;
+  /* checkbox disapear */
+}
+@media (max-width: 959px) {
+  #check:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    padding-top: 10px;
+  }
+}
+
+/* Section 1 : Mes Compétences */
+#competences {
+  padding: 90px 30px 60px 30px;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  #competences {
+    padding: 90px 200px 60px 200px;
+  }
+}
+#competences h3 {
+  margin-top: 30px;
+}
+
+@media (min-width: 960px) {
+  .competences__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 960px) {
+  .competences__blocks > article {
+    width: 48%;
+  }
+}
+
+#soft-skills {
+  padding-top: 50px;
+}
+
+.box {
+  margin-top: 30px;
+  width: 100%;
+  height: 202px;
+  position: relative;
+}
+.box > img {
+  height: 70px;
+  margin-top: 65px;
+  transform: scale(1);
+  transition: all 600ms;
+}
+.box:hover > img {
+  transform: scale(0.5) translateY(-100px);
+}
+.box__text {
+  opacity: 0;
+  margin: 0 5px;
+}
+.box__text > p {
+  margin-bottom: 5px;
+}
+.box__text--blue {
+  color: #FFF;
+}
+.box__text--pink-light {
+  color: #E29578;
+}
+.box__text--pink-dark {
+  color: #FFDDD2;
+}
+.box:hover > .box__text {
+  opacity: 1;
+  transition: all 600ms;
+  transform: translateY(-50px);
+}
+.box--blue-dark {
+  background-color: #006d77;
+}
+.box--blue-light {
+  background-color: #83C5BE;
+}
+.box--pink-light {
+  background-color: #FFDDD2;
+}
+.box--pink-dark {
+  background-color: #E29578;
+}
+
+/* Section 2 : Mon Parcours */
+#path {
+  background-color: #EDF6F9;
+  padding: 90px 30px 60px 30px;
+}
+#path h2 {
+  justify-content: center;
+  text-align: center;
+}
+#path h3 {
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+#path h4 {
+  font-size: 1.1rem;
+}
+#path aside {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Expériences professionnelles */
+.chat-bubble--left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 30px;
+  flex-direction: row-reverse;
+}
+.chat-bubble--right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 30px;
+}
+.chat-bubble img {
+  width: 80%;
+}
+.chat-bubble p {
+  margin-top: 5px;
+}
+.chat-bubble__text {
+  width: 205px;
+  text-align: left;
+  padding: 12px 10px;
+  border: 2px #B8DEDC solid;
+  background-color: #B8DEDC;
+  margin-top: 40px;
+}
+@media (min-width: 960px) {
+  .chat-bubble__text {
+    width: 400px;
+  }
+}
+.chat-bubble__text--left {
+  border-radius: 0 10px 10px 10px;
+}
+.chat-bubble__text--right {
+  border-radius: 10px 0 10px 10px;
+}
+.chat-bubble__triangle {
+  position: absolute;
+  top: 0;
+  margin-top: 40px;
+  border: 10px solid;
+}
+.chat-bubble__triangle--left {
+  left: 92px;
+  border-color: #B8DEDC #B8DEDC transparent transparent;
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  .chat-bubble__triangle--left {
+    left: 167px;
+  }
+}
+@media (min-width: 1600px) {
+  .chat-bubble__triangle--left {
+    left: 467px;
+  }
+}
+.chat-bubble__triangle--right {
+  right: 92px;
+  border-color: #B8DEDC transparent transparent #B8DEDC;
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  .chat-bubble__triangle--right {
+    right: 167px;
+  }
+}
+@media (min-width: 1600px) {
+  .chat-bubble__triangle--right {
+    right: 467px;
+  }
+}
+.chat-bubble__img {
+  border: 3px #B8DEDC solid;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background: #fff;
+}
+.chat-bubble__img--left {
+  margin: 10px 30px 0 15px;
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  .chat-bubble__img--left {
+    margin-left: 90px;
+  }
+}
+@media (min-width: 1600px) {
+  .chat-bubble__img--left {
+    margin-left: 390px;
+  }
+}
+.chat-bubble__img--right {
+  margin: 10px 15px 0 30px;
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  .chat-bubble__img--right {
+    margin-right: 90px;
+  }
+}
+@media (min-width: 1600px) {
+  .chat-bubble__img--right {
+    margin-right: 390px;
+  }
+}
+
+#carrefour {
+  margin-top: 14px;
+}
+
+#librairy {
+  margin-top: 7px;
+}
+
+#arche {
+  margin-top: 6px;
+}
+
+.work {
+  color: #006D77;
+}
+.work__info {
+  color: #FFF;
+}
+.work__info__time {
+  font-family: Ubuntu-Bold;
+}
+.work__city {
+  font-style: italic;
+}
+
+/* Formations et Diplômes */
+#formation {
+  margin: 90px 30px 0 30px;
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  #formation__blocks {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+}
+@media (min-width: 1600px) {
+  #formation__blocks {
+    margin-left: 360px;
+    margin-right: 360px;
+  }
+}
+
+.formation {
+  width: auto;
+  margin-top: 30px;
+  padding: 10px;
+  border: 3px #E29578 solid;
+  background: #F6EAE6;
+  display: flex;
+  text-align: justify;
+}
+@media (min-width: 960px) {
+  .formation {
+    padding: 20px;
+  }
+}
+.formation__icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #E29578;
+}
+.formation h4 {
+  text-align: left;
+}
+.formation__school {
+  color: #E29578;
+}
+.formation__info {
+  color: #F1B9A5;
+}
+.formation__description p {
+  margin-top: 5px;
+}
+
+/* Section 3 : Portfolio */
+#portfolio {
+  padding: 90px 30px 60px 30px;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  #portfolio {
+    padding: 90px 100px 60px 100px;
+  }
+}
+#portfolio__blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 960px) {
+  #portfolio__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.portfolio__block {
+  margin: 30px 10px 0 10px;
+  border: 3px #EDF6F9 solid;
+  width: 200px;
+  height: 355.72px;
+}
+@media (min-width: 960px) {
+  .portfolio__block {
+    margin: 30px 20px 0 20px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1599px) {
+  .portfolio__block {
+    width: 400px;
+    height: 225px;
+  }
+}
+@media (min-width: 1600px) {
+  .portfolio__block {
+    width: 450px;
+    height: 253.12px;
+  }
+}
+.portfolio__block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Section 4 : Contact */
+#contact {
+  justify-content: center;
+  text-align: center;
+  background-color: #EDF6F9;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+#contact h2 {
+  margin-bottom: 10px;
+}
+#contact__blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  width: fit-content;
+}
+.contact__socialmedia {
+  padding: 8px 10px;
+}
+.contact__socialmedia__icon {
+  font-size: 1.5rem;
+  color: #0077B5;
+}
+.contact__icon {
+  margin-right: 10px;
+  color: #006D77;
+}
+.contact__info {
+  color: #000;
+}
+.contact__info a {
+  color: #000;
+}
+
+/* Mentions légales */
+#mentions {
+  background-color: #E29578;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  padding: 10px 0;
+}
+#mentions__date {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #FFDDD2;
+}
+#mentions__content {
+  margin: 30px 40px;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+#mentions__content h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+#mentions__redaction {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#mentions__footer {
+  text-align: center;
+  color: #000;
+  padding-bottom: 20px;
+  font-size: 0.9rem;
+}
+#mentions__footer a {
+  text-align: center;
+  color: #000;
+  padding-bottom: 20px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */

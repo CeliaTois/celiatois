@@ -1,0 +1,42 @@
+/* Section 4 : Contact */
+#contact {
+    @include center;
+    background-color: $bg-color;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    & h2 {
+        margin-bottom: 10px;
+    }
+    &__blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    width: fit-content;
+    &__socialmedia {
+        padding: 8px 10px;
+        &__icon {
+            font-size: map-get($font-size, icon);
+            color: #0077B5;
+        }
+    }
+    &__icon {
+        margin-right: 10px;
+        color: $contact-icon-clr;
+    }
+    &__info {
+        color: $contact-p-clr;
+        & a {
+            color: $contact-p-clr;
+        }
+    }
+}

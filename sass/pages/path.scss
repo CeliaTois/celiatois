@@ -1,0 +1,173 @@
+/* Section 2 : Mon Parcours */
+#path {
+    background-color: $bg-color;
+    padding: $padding-section;
+    & h2 {
+        @include center;
+    }
+    & h3 {
+        @include center;
+        margin-top: map-get($margin, section);
+    }
+    & h4 {
+        font-size: map-get($font-size, h4);
+    }
+    & aside {
+        @include center;
+    }
+}
+
+/* Expériences professionnelles */
+.chat-bubble {
+    &--left {
+        @include chat-bubble-position;
+        flex-direction: row-reverse;
+    }
+    &--right {
+        @include chat-bubble-position;
+    }
+    & img {
+        width: 80%;
+    }
+    & p {
+        margin-top: 5px;
+    }
+    &__text {
+        width: 205px;
+        text-align: left;
+        padding: 12px 10px;
+        border: 2px $chat-bubble-color solid;
+        background-color: $chat-bubble-color;
+        margin-top: 40px;
+        @include sm-lg-screen {
+            width: 400px;
+        }
+        &--left {
+            border-radius: 0 10px 10px 10px;
+        }
+        &--right {
+            border-radius: 10px 0 10px 10px;
+        }
+    }
+    &__triangle {
+        position: absolute;
+        top: 0;
+        margin-top: 40px;
+        border: 10px solid;
+        &--left {
+            left: 92px;
+            @include small-screen {
+                left: 167px;
+            }
+            @include large-screen {
+                left: 467px;
+            }
+            border-color: $chat-bubble-color $chat-bubble-color transparent transparent;
+        }
+        &--right {
+            right: 92px;
+            @include small-screen {
+                right: 167px;
+            }
+            @include large-screen {
+                right: 467px;
+            }
+        	border-color: $chat-bubble-color transparent transparent $chat-bubble-color;
+        }
+    }
+    &__img {
+        border: 3px $chat-bubble-color solid;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        background: #fff;
+        &--left {
+            margin: 10px 30px 0 15px;
+            @include small-screen {
+                margin-left: 90px;
+            }
+            @include large-screen {
+                margin-left: 390px;
+            }
+        }
+        &--right {
+            margin: 10px 15px 0 30px;
+            @include small-screen {
+                margin-right: 90px;
+            }
+            @include large-screen {
+                margin-right: 390px;
+            }
+        }
+    }
+}
+
+#carrefour {
+    margin-top: 14px;
+}
+
+#librairy {
+    margin-top: 7px;
+}
+
+#arche {
+    margin-top: 6px;
+}
+
+.work {
+    color: $work-color;
+    &__info {
+        color: $work-duration;
+        &__time {
+            font-family: $p-font-bold;
+        }
+    }
+    &__city {
+        font-style: italic;
+    }
+}
+
+/* Formations et Diplômes */
+#formation {
+    margin: 90px 30px 0 30px;
+    &__blocks {
+        @include small-screen {
+            margin-left: 160px;
+            margin-right: 160px;
+        }
+        @include large-screen {
+            margin-left: 360px;
+        margin-right: 360px;
+        }
+    }
+}
+
+.formation {
+    width: auto;
+    margin-top: map-get($margin, section);
+    padding: 10px;
+    border: $formation-border;
+    background: $formation-bg;
+    display: flex;
+    text-align: justify;
+    @include sm-lg-screen {
+        padding: 20px;
+    }
+    &__icon {
+        margin-right: 10px;
+        font-size: map-get($font-size, icon);
+        color: $formation-dark-clr;  
+    }
+    & h4 {
+        text-align: left;
+    }
+    &__school {
+        color: $formation-dark-clr;
+    }
+    &__info {
+        color: $formation-light-clr;
+    }
+    &__description p {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,20 @@
+/* Header */
+header {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: map-get($margin, section);
+    h1 {
+        margin-bottom: map-get($margin, h1);
+        font-family: $h1-font;
+        font-size: map-get($font-size, h1);
+        @include large-screen {
+            font-size: 3rem;
+        }
+    }
+    p {
+        font-size: map-get($font-size, nav);
+        @include large-screen {
+            font-size: 1.2rem;
+        }
+    }
+}
