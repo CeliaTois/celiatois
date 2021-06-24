@@ -14,11 +14,6 @@
     @include sm-lg-screen {
         @include skills-portfolio-position;
     }
-    &>article {
-        @include sm-lg-screen {
-            width: 48%;
-        }
-    }
 }
 
 #soft-skills {
@@ -28,6 +23,9 @@
 .box {
     margin-top: map-get($margin, section);
     width: $full-width;
+    @include sm-lg-screen {
+        width: 48%;
+    }
     height: 202px;
     position: relative;
     &>img {
