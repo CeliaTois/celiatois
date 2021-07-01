@@ -106,7 +106,7 @@ nav > ul > li {
 }
 .nav-element a:hover {
   font-family: Ubuntu-Bold;
-  font-size: 0.9rem;
+  font-size: 0.955rem;
 }
 
 @media (min-width: 1600px) {
