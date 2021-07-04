@@ -34,7 +34,6 @@
     }
     &__text {
         width: 205px;
-        text-align: left;
         padding: 12px 10px;
         border: 2px $chat-bubble-color solid;
         background-color: $chat-bubble-color;
@@ -55,7 +54,7 @@
         margin-top: 40px;
         border: 10px solid;
         &--left {
-            left: 92px;
+            left: 77px;
             @include small-screen {
                 left: 167px;
             }
@@ -65,7 +64,7 @@
             border-color: $chat-bubble-color $chat-bubble-color transparent transparent;
         }
         &--right {
-            right: 92px;
+            right: 77px;
             @include small-screen {
                 right: 167px;
             }
@@ -77,12 +76,14 @@
     }
     &__img {
         border: 3px $chat-bubble-color solid;
-        width: 60px;
-        height: 60px;
+        width: 16%;
+        height: 16%;
+        max-width: 60px;
+        max-height: 60px;
         border-radius: 50px;
         background: #fff;
         &--left {
-            margin: 10px 30px 0 15px;
+            margin: 10px 30px 0 0;
             @include small-screen {
                 margin-left: 90px;
             }
@@ -91,7 +92,7 @@
             }
         }
         &--right {
-            margin: 10px 15px 0 30px;
+            margin: 10px 0 0 30px;
             @include small-screen {
                 margin-right: 90px;
             }
@@ -103,15 +104,15 @@
 }
 
 #carrefour {
-    margin-top: 14px;
+    margin: 23% 0;
 }
 
 #librairy {
-    margin-top: 7px;
+    margin-top: 10%;
 }
 
 #arche {
-    margin-top: 6px;
+    margin-top: 8%;
 }
 
 .work {
@@ -149,7 +150,6 @@
     border: $formation-border;
     background: $formation-bg;
     display: flex;
-    text-align: justify;
     @include sm-lg-screen {
         padding: 20px;
     }

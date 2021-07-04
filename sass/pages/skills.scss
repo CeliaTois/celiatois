@@ -23,11 +23,12 @@
 .box {
     margin-top: map-get($margin, section);
     width: $full-width;
+    height: auto;
+    min-height: 202px;
+    position: relative;
     @include sm-lg-screen {
         width: 48%;
     }
-    height: 202px;
-    position: relative;
     &>img {
         height: 70px;
         margin-top: 65px;
